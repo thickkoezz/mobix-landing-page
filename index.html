@@ -280,6 +280,57 @@
             background: #f5f5f5;
         }
 
+        /* Testimonial Section */
+        .testimoni-section {
+            background: linear-gradient(135deg, #0055a4 0%, #00a8cc 100%);
+            padding: 60px 20px;
+            margin: 0;
+        }
+
+        .testimoni-section h2 {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .testimoni-section .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.85);
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .testimoni-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimoni-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimoni-grid img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .testimoni-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+        }
+
         /* Floating WhatsApp Button */
         .floating-wa {
             position: fixed;
@@ -406,6 +457,17 @@
             <div class="promo-item">
                 <img src="foto.4.jpeg" alt="Mobix Promo 4">
             </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimoni-section">
+        <h2>Testimoni Agent Mobix</h2>
+        <p class="subtitle">Apa Kata Mereka Yang Sudah Bergabung</p>
+        <div class="testimoni-grid">
+            <img src="testimoni.1.jpeg" alt="Testimoni Agent Mobix 1">
+            <img src="testimoni.2.jpeg" alt="Testimoni Agent Mobix 2">
+            <img src="testimoni.3.jpeg" alt="Testimoni Agent Mobix 3">
         </div>
     </section>
 
