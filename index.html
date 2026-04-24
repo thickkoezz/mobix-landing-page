@@ -223,6 +223,37 @@
             text-decoration: underline;
         }
 
+        /* Floating WhatsApp Button */
+        .floating-wa {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px 12px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .floating-wa:hover {
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .floating-wa img {
+            width: 28px;
+            height: 28px;
+        }
+
         @media (max-width: 600px) {
             .hero h1 {
                 font-size: 2rem;
@@ -233,10 +264,25 @@
             article h2 {
                 font-size: 1.4rem;
             }
+            .floating-wa {
+                left: 10px;
+                padding: 10px 16px 10px 14px;
+                font-size: 0.85rem;
+            }
+            .floating-wa img {
+                width: 24px;
+                height: 24px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/" class="floating-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Chat WhatsApp AI Mobix
+    </a>
 
     <!-- Header -->
     <header class="site-header">
