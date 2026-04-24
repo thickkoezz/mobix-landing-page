@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOBIX by DSS Motor - Bergabung Menjadi Agent Mobix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #2c2c2c;
+            background: #fafafa;
+        }
+
+        /* Header */
+        .site-header {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .site-header img {
+            height: 60px;
+            width: auto;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .hero .tagline {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.4rem;
+            color: #e94560;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Blog Container */
+        .blog-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Article */
+        article {
+            background: white;
+            border-radius: 8px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        article h2 {
+            font-family: 'Arial', sans-serif;
+            color: #1a1a2e;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        article p {
+            font-size: 1.15rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .benefits-list li {
+            padding: 15px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+
+        .benefits-list li::before {
+            content: "✔";
+            color: #e94560;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Steps */
+        .steps {
+            list-style: none;
+            margin: 30px 0;
+            counter-reset: step;
+        }
+
+        .steps li {
+            padding: 18px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .steps li:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            background: #1a1a2e;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .cta-box h2 {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .cta-box .message-box {
+            background: rgba(255,255,255,0.15);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-style: italic;
+            margin: 20px 0 30px;
+        }
+
+        .wa-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .wa-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .site-footer h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .site-footer .tagline {
+            color: #e94560;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .site-footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            article {
+                padding: 35px 25px;
+            }
+            article h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <img src="logo.jpg" alt="MOBIX Logo">
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>MOBIX by DSS Motor</h1>
+        <p class="tagline">Xtra Aman. Xtra Yakin.</p>
+    </section>
+
+    <!-- Blog Content -->
+    <main class="blog-container">
+
+        <article>
+            <h2>Bangun Income Ratusan Juta dengan Bergabung Menjadi Agent Mobi</h2>
+            <p>Punya network luas? Suka dunia otomotif? Sekarang saatnya ubah koneksi jadi penghasilan bersama Mobix by DSS Motor.</p>
+            <p>Mobix membuka kesempatan bagi siapa saja yang ingin mendapatkan penghasilan tambahan dari dunia otomotif. Tanpa perlu modal awal, Anda bisa langsung memulai sebagai agent Mobix.</p>
+        </article>
+
+        <article>
+            <h2>Kenapa Jadi Agent Mobix?</h2>
+            <ul class="benefits-list">
+                <li>Tanpa biaya registrasi. Gabung gratis, tanpa modal awal.</li>
+                <li>Stock mobil siap jual. Agent bisa menawarkan unit-unit Mobix yang sudah tersedia.</li>
+                <li>Full support dari tim Mobix. Dibantu materi promosi, foto mobil, pricelist, dan informasi unit.</li>
+                <li>Peluang income besar. Dapatkan potensi penghasilan dari setiap transaksi penjualan mobil.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Cara Mulai Sangat Mudah</h2>
+            <ul class="steps">
+                <li><span class="step-num">1</span> Tanya stock Mobix yang tersedia</li>
+                <li><span class="step-num">2</span> Minta foto unit, materi promosi, dan pricelist</li>
+                <li><span class="step-num">3</span> Share ke calon customer</li>
+                <li><span class="step-num">4</span> Closing dibantu oleh tim Mobix</li>
+            </ul>
+        </article>
+
+        <div class="cta-box">
+            <h2>Mau Mulai Jadi Agent Mobix?</h2>
+            <p>Langsung chat AI Mobix sekarang.</p>
+            <p>Klik WhatsApp:</p>
+            <div class="message-box">"Halo Mobix, saya mau tanya stock dan mau jadi agent Mobix."</div>
+            <a href="https://wa.me/" class="wa-button">💬 Chat WhatsApp AI Mobix</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <h3>MOBIX by DSS Motor</h3>
+        <p class="tagline">Xtra Aman. Xtra Yakin.</p>
+        <p><a href="https://minimax-algeng-chat-tts-us.oss-us-east-1.aliyuncs.com/ccv2%2F2026-04-24%2FMiniMax-M2.7-highspeed%2F1983395074054034058%2F335a31ed239cc2d0d26d6ce38dc7466c9e2d4ba09b0f9ead3934447dad571b80..jpeg?Expires=1777122451&OSSAccessKeyId=LTAI5tCpJNKCf5EkQHSuL9xg&Signature=%2Bav1dJ1Y0gEECKYPV4GxT%2FH8nSI%3D" target="_blank">Lihat Promo</a></p>
+    </footer>
+
+</body>
+</html>
