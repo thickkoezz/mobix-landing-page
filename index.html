@@ -223,12 +223,57 @@
             text-decoration: underline;
         }
 
+        /* Promo Gallery */
+        .promo-section {
+            background: white;
+            padding: 60px 20px;
+            margin: 0;
+        }
+
+        .promo-section h2 {
+            font-family: 'Arial', sans-serif;
+            color: #1a1a2e;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .promo-section .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .promo-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .promo-grid img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
         /* Floating WhatsApp Button */
         .floating-wa {
             position: fixed;
-            left: 20px;
+            right: 20px;
             bottom: 30px;
             top: auto;
+            left: auto;
             transform: none;
             z-index: 1000;
             display: flex;
@@ -266,7 +311,7 @@
                 font-size: 1.4rem;
             }
             .floating-wa {
-                left: 10px;
+                right: 10px;
                 bottom: 20px;
                 padding: 10px 16px 10px 14px;
                 font-size: 0.85rem;
@@ -281,7 +326,7 @@
 <body>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/" class="floating-wa" target="_blank">
+    <a href="https://wa.me/6285701959826" class="floating-wa" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         Chat WhatsApp AI Mobix
     </a>
@@ -332,10 +377,22 @@
             <p>Langsung chat AI Mobix sekarang.</p>
             <p>Klik WhatsApp:</p>
             <div class="message-box">"Halo Mobix, saya mau tanya stock dan mau jadi agent Mobix."</div>
-            <a href="https://wa.me/" class="wa-button">💬 Chat WhatsApp AI Mobix</a>
+            <a href="https://wa.me/6285701959826" class="wa-button">💬 Chat WhatsApp AI Mobix</a>
         </div>
 
     </main>
+
+    <!-- Promo Gallery -->
+    <section class="promo-section">
+        <h2>Galeri Promo Mobix</h2>
+        <p class="subtitle">Kenali Mobix Lebih Dekat</p>
+        <div class="promo-grid">
+            <img src="foto.1.jpeg" alt="Mobix Promo 1">
+            <img src="foto.2.jpeg" alt="Mobix Promo 2">
+            <img src="foto.3.jpeg" alt="Mobix Promo 3">
+            <img src="foto.4.jpeg" alt="Mobix Promo 4">
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="site-footer">
